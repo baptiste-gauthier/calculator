@@ -1,28 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import App from './App';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 
-function formatName(user) {
-  return user.firstName + ' ' + user.lastName;
+function Test(props) {
+  return <p> {props.name}</p>
 }
 
-const user = {
-  firstName: 'Kylian',
-  lastName: 'Mbappé'
-};
+const element = <Test name="Bapt" /> 
 
-const element = (
-  <h1>
-    Bonjour, {formatName(user)} !
-  </h1>
-);
+
+// ReactDOM.render(
+  // <React.StrictMode>
+  //   <App />
+  // </React.StrictMode>
+//   element,
+//   document.getElementById('root')
+// );
+
+function List(props)
+{
+  return (
+    <ul className="list">
+      <li> {props.number} </li>
+      <li> {props.number}</li>
+      <li> {props.number}</li>
+    </ul>
+  )
+}
+
+const list = <List number="1" />
 
 ReactDOM.render(
-  element,
-  document.getElementById('root')
+  list,
+  document.getElementById('root') 
 );
 
 // If you want to start measuring performance in your app, pass a function

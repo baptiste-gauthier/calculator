@@ -9,4 +9,5 @@ function TheTitle() {
   );
 }
 
-export default TheTitle;
+export default TheTitle
+
