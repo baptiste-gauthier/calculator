@@ -1,40 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Calculator from './Calculator';
 import reportWebVitals from './reportWebVitals';
 
 
-function Test(props) {
-  return <p> {props.name}</p>
-}
-
-const element = <Test name="Bapt" /> 
-
-
-// ReactDOM.render(
-  // <React.StrictMode>
-  //   <App />
-  // </React.StrictMode>
-//   element,
-//   document.getElementById('root')
-// );
-
-function List(props)
-{
-  return (
-    <ul className="list">
-      <li> {props.number} </li>
-      <li> {props.number}</li>
-      <li> {props.number}</li>
-    </ul>
-  )
-}
-
-const list = <List number="1" />
-
 ReactDOM.render(
-  list,
+  <React.StrictMode>
+    <Calculator />
+  </React.StrictMode>,
   document.getElementById('root') 
 );
 
