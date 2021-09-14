@@ -10,7 +10,7 @@ function BeautifullScreen() {
         <div className="calculator_screen">
             <p> {string}</p>
         </div>
-        <AmazingNumberButton />
+        <AmazingNumberButton value={string} function={setString}/>
     </div>
     )
 }
