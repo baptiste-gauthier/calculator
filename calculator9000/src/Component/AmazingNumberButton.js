@@ -24,7 +24,7 @@ function AmazingNumberButton(props)
           <button className="case_calculator" onClick={() => {props.function(props.value + 1)}}>1</button>
         </div>
         <div className="row_calaculator">
-          <button className="case_calculator_0" onClick={() => {alert("ya")}}>0</button>
+          <button className="case_calculator_0" onClick={() => {props.function(props.value + 0)}}>0</button>
         </div>
       </div>
       <div className="operator">
