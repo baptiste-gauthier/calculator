@@ -2,7 +2,14 @@ import GreatOperationButton from './GreatOperationButton';
 import MagnificientEqualButton from './MagnificientEqualButton'; 
 import React, { useState } from 'react';
 
-
+function calcul(data,functionresult)
+{
+  // var result = eval(data);
+  // alert(result);
+   
+  functionresult(data = eval(data));
+  
+}
 
 function AmazingNumberButton(props)
 {
@@ -32,7 +39,7 @@ function AmazingNumberButton(props)
         <GreatOperationButton value={props.value} function={props.function} />
       </div>
       <div className="egal">
-        <MagnificientEqualButton />
+        <MagnificientEqualButton functioncalcul={calcul} data={props.value} functionresult={props.function} />
       </div>
     </div>
   )

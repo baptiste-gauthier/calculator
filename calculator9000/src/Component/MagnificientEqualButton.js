@@ -1,7 +1,7 @@
-function MagnificientEqualButton()
+function MagnificientEqualButton(props)
 {
     return (
-        <button> = </button>
+        <button onClick={ () => {props.functioncalcul(props.data,props.functionresult)}}> = </button>
     )
 }
 

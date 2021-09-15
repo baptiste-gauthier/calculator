@@ -76,7 +76,10 @@
   text-align: center;
   border: 1px solid black;
   padding: 10px;
-  background-color: rgba(221, 216, 216, 0.836);
+  background-color: rgba(252, 101, 101, 0.836);
+}
+.case_calculator:hover{
+  background-color: rgba(250, 150, 150, 0.836);
 }
 
 .case_operator {
@@ -87,12 +90,18 @@
   background-color: rgba(221, 216, 216, 0.836);
 }
 .case_calculator_0{
-  background-color: rgba(221, 216, 216, 0.836);
+  background-color: rgba(252, 101, 101, 0.836);
   width: 100%;
   padding: 10px;
   border: 1px solid black;
   text-align: center;
 }
+.case_calculator_0:hover{
+  background-color: rgba(250, 150, 150, 0.836);
+}
 .egal button{
   height: 100%;
+  background-color: rgba(221, 216, 216, 0.836);
+  padding: 10px;
+  border: 1px solid black;
 }

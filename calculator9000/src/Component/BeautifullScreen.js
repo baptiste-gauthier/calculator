@@ -4,7 +4,7 @@ import AmazingNumberButton from './AmazingNumberButton';
 
 function BeautifullScreen() {
 
-    const [string, setString] = useState("0") ;
+    const [string, setString] = useState("") ;
     return( 
     <div>
         <div className="calculator_screen">
