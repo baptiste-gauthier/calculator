@@ -1,6 +1,7 @@
 import GreatOperationButton from './GreatOperationButton';
 import MagnificientEqualButton from './MagnificientEqualButton'; 
 import React, { useState } from 'react';
+import CButton from './CButton';
 
 function calcul(data,functionresult)
 {
@@ -8,7 +9,17 @@ function calcul(data,functionresult)
   // alert(result);
    
   functionresult(data = eval(data));
+
+  if(data > 9000)
+  {
+    alert("ooooooooh"); 
+  }
   
+}
+
+function reset(data,functionresult)
+{
+  functionresult(data = ""); 
 }
 
 function AmazingNumberButton(props)
@@ -37,6 +48,9 @@ function AmazingNumberButton(props)
       </div>
       <div className="operator">
         <GreatOperationButton value={props.value} function={props.function} />
+      </div>
+      <div>
+        <CButton functionreset={reset} data={props.value} functionresult={props.function}/>
       </div>
       <div className="egal">
         <MagnificientEqualButton functioncalcul={calcul} data={props.value} functionresult={props.function} />

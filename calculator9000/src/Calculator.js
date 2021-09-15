@@ -5,6 +5,7 @@ import AmazingNumberButton from './Component/AmazingNumberButton';
 import BeautifullScreen from './Component/BeautifullScreen';
 import GreatOperationButton from './Component/GreatOperationButton';
 import TheTitle from './Component/TheTitle';
+import ItSOverNineThousand from './Component/ItSOverNineThousand';
 
 function Calculator() {
   return(
@@ -12,6 +13,7 @@ function Calculator() {
     <TheTitle />
     <BeautifullScreen />
     {/* <AmazingNumberButton /> */}
+    <ItSOverNineThousand />
   </React.StrictMode> 
   )
 
