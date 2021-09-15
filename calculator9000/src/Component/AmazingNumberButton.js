@@ -1,6 +1,7 @@
 import GreatOperationButton from './GreatOperationButton';
+import MagnificientEqualButton from './MagnificientEqualButton'; 
 import React, { useState } from 'react';
-import BeautifullScreen from './BeautifullScreen';
+
 
 
 function AmazingNumberButton(props)
@@ -28,7 +29,10 @@ function AmazingNumberButton(props)
         </div>
       </div>
       <div className="operator">
-        <GreatOperationButton />
+        <GreatOperationButton value={props.value} function={props.function} />
+      </div>
+      <div className="egal">
+        <MagnificientEqualButton />
       </div>
     </div>
   )
