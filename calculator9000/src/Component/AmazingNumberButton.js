@@ -1,36 +1,42 @@
 import GreatOperationButton from './GreatOperationButton';
 import MagnificientEqualButton from './MagnificientEqualButton'; 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CButton from './CButton';
 import ItSOverNineThousand from './ItSOverNineThousand';
 
-function calcul(data,functionresult,state9000,setstate9000)
-{
-  // var result = eval(data);
-  // alert(result);
-   
-  functionresult(data = eval(data));
 
-  if(data > 9000)
-  {
-    setstate9000(state9000 = "bloc_mgs_9000_block");
-  }
-  else if(data < 9000)
-  {
-    setstate9000(state9000 = "bloc_mgs_9000");
-  }
-  
-}
 
-function reset(data,functionresult)
-{
-  functionresult(data = ""); 
-}
+
+
 
 function AmazingNumberButton(props)
 {
   const [state9000, setState9000] = useState("bloc_msg_9000") ;
-
+  
+  function calcul(data,functionresult,state9000,setstate9000)
+  {
+    // var result = eval(data);
+    // alert(result);
+  
+      functionresult(data = eval(data));
+    
+      if(data > 9000)
+      {
+        console.log(data)
+        setstate9000(state9000 = "bloc_msg_9000_block");
+      }
+      else if(data < 9000)
+      {
+        console.log(data)
+        setstate9000(state9000 = "bloc_msg_9000");
+      }
+    
+  }
+  function reset(data,functionresult)
+  {
+    functionresult(data = ""); 
+  }
+  
   return (
     <div className="touches">
       <div className="number">
