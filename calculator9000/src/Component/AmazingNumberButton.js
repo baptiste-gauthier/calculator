@@ -2,8 +2,9 @@ import GreatOperationButton from './GreatOperationButton';
 import MagnificientEqualButton from './MagnificientEqualButton'; 
 import React, { useState } from 'react';
 import CButton from './CButton';
+import ItSOverNineThousand from './ItSOverNineThousand';
 
-function calcul(data,functionresult)
+function calcul(data,functionresult,state9000,setstate9000)
 {
   // var result = eval(data);
   // alert(result);
@@ -12,7 +13,11 @@ function calcul(data,functionresult)
 
   if(data > 9000)
   {
-    alert("ooooooooh"); 
+    setstate9000(state9000 = "bloc_mgs_9000_block");
+  }
+  else if(data < 9000)
+  {
+    setstate9000(state9000 = "bloc_mgs_9000");
   }
   
 }
@@ -24,6 +29,8 @@ function reset(data,functionresult)
 
 function AmazingNumberButton(props)
 {
+  const [state9000, setState9000] = useState("bloc_msg_9000") ;
+
   return (
     <div className="touches">
       <div className="number">
@@ -53,8 +60,14 @@ function AmazingNumberButton(props)
         <CButton functionreset={reset} data={props.value} functionresult={props.function}/>
       </div>
       <div className="egal">
-        <MagnificientEqualButton functioncalcul={calcul} data={props.value} functionresult={props.function} />
+        <MagnificientEqualButton functioncalcul={calcul} data={props.value} functionresult={props.function} state9000={state9000} setState9000={setState9000} />
       </div>
+
+      <div>
+        <ItSOverNineThousand statescreen={props.value} state9000={state9000} setState9000={setState9000} />
+      </div>
+
+
     </div>
   )
 }

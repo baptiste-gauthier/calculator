@@ -13,7 +13,6 @@ function Calculator() {
     <TheTitle />
     <BeautifullScreen />
     {/* <AmazingNumberButton /> */}
-    <ItSOverNineThousand />
   </React.StrictMode> 
   )
 

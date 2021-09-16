@@ -1,12 +1,12 @@
 
 import React, { useState } from 'react';
 
-function ItSOverNineThousand()
-{
-    const [classname, setClassname] = useState("bloc_msg_9000") ;
+function ItSOverNineThousand(props)
+{   
+    
     var message = 'It’s Over 9000 !!!';
     return (
-        <div className={classname}>
+        <div className={props.state9000}>
             <p> {message} </p>
         </div>
     )
